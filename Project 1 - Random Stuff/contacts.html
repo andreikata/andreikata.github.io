@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Contact Me</title>
+    <link rel="stylesheet" href="stylesheet.css">
+    <script src="https://kit.fontawesome.com/c11ac08255.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+
+</head>
+<body>
+<button onclick="topFunction({top: 0, behavior: 'smooth'})" id="myBtn" title="UP"><i class="fas fa-arrow-circle-up"></i>
+</button>
+<div class="navigation-wrap">
+    <div class="button-menu">
+        <i class="fas fa-bars"></i>
+
+    </div>
+
+    <div class="navigation-signature-wrap">
+        <div class="navigation-signature">
+            Andreika
+        </div>
+    </div>
+    <div class="navigation-buttons-wrap">
+
+
+        <a href="index.html" class="navigation-buttons"> Home </a>
+        <div class="dogs.dropdown">
+            <button onclick="dropdownMenuClick()" class="navigation-buttons">Dogs</button>
+            <div class="dropdown-content" id="DogsDropdown">
+            <a href="dogs.html" class="navigation-buttons DogsDropdownButtons"> Dogs Main 1 </a>
+            <a href="dogs.html" class="navigation-buttons DogsDropdownButtons"> Dogs Main 2 </a>
+            <a href="dogs.html" class="navigation-buttons DogsDropdownButtons"> Dogs Main 3 </a>
+        </div>
+
+    </div>
+
+    <a href="contacts.html" class="navigation-buttons"> Contact me </a>
+    <a href="htmlCV.html" class="navigation-buttons"> My HTML CV </a>
+
+</div>
+
+
+</div>
+<div class="mapWrapper">
+    <h3 class="contactsHeader"> You can find me here</h3>
+    <div id="map"></div>
+    <script>
+        function initMap() {
+            var varna = {lat: 43.225141, lng: 27.985234};
+            var map = new google.maps.Map(
+                document.getElementById('map'), {zoom: 17, center: varna});
+            var marker = new google.maps.Marker({position: varna, map: map});
+        }
+    </script>
+    <script async defer
+            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBCm-VdpUKY4Pio3S8f7qZZoluoGfsoXNs&callback=initMap">
+    </script>
+</div>
+
+<h3 class="contactsHeader"> Yep, also dis </h3>
+
+<div class="map2wrap">
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d432.1716425720764!2d27.985661776989453!3d43.224322901967525!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40a4568a31cb7cf1%3A0x369828fc1687ebed!2z0YPQuy4g4oCeMTAt0YLQsOKAnCA3LCA5MDA2INCi0YDQsNC60LDRgtCwLCDQktCw0YDQvdCw!5e0!3m2!1sbg!2sbg!4v1591014192508!5m2!1sbg!2sbg"
+            id=map2 width="100%" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false"
+            tabindex="0"></iframe>
+</div>
+<div class="footer">
+
+    <div class="footerColumn2">
+        <h3 class="footerHeading"> Table 1 </h3>
+        <ul>
+            <li><a href="https://google.com" class="footerLink"> google.com 1 </a></li>
+            <li><a href="https://youtube.com" class="footerLink"> youtube.com 1 </a></li>
+            <li><a href="https://netfilx.com" class="footerLink"> netfilx.com 1 </a></li>
+        </ul>
+    </div>
+    <div class="footerColumn2">
+        <h3 class="footerHeading"> Table 2 </h3>
+        <ul>
+            <li><a href="https://google.com" class="footerLink"> google.com 2 </a></li>
+            <li><a href="https://youtube.com" class="footerLink"> youtube.com 2 </a></li>
+            <li><a href="https://netfilx.com" class="footerLink"> netfilx.com 2 </a></li>
+        </ul>
+    </div>
+    <div class="footerColumn2">
+        <h3 class="footerHeading"> Table 3 </h3>
+        <ul>
+            <li><a href="https://google.com" class="footerLink"> google.com 3 </a></li>
+            <li><a href="https://youtube.com" class="footerLink"> youtube.com 3 </a></li>
+            <li><a href="https://netfilx.com" class="footerLink"> netfilx.com 3 </a></li>
+        </ul>
+    </div>
+    <div class="footerColumn1">
+        <h3 class="footerHeading"> Facebook Page </h3>
+        <div class="fb-page" data-href="https://www.facebook.com/polesno.store/" data-tabs="" data-width="300px"
+             data-height="300" data-small-header="true" data-adapt-container-width="true" data-hide-cover="false"
+             data-show-facepile="true">
+            <blockquote cite="https://www.facebook.com/polesno.store/" class="fb-xfbml-parse-ignore"><a
+                    href="https://www.facebook.com/polesno.store/">Магазин Polesno</a></blockquote>
+        </div>
+
+    </div>
+</div>
+</body>
+<script>
+    const items3 = document.querySelectorAll(`.item-wraper`)
+
+    items3.forEach(Item => {
+        Item.addEventListener(`mouseover`, () => {
+            Item.childNodes[1].classList.add(`background-darken`)
+        })
+        Item.addEventListener(`mouseout`, () => {
+            Item.childNodes[1].classList.remove(`background-darken`)
+        })
+
+    })
+    mybutton = document.getElementById("myBtn");
+
+    // When the user scrolls down 20px from the top of the document, show the button
+    window.onscroll = function () {
+        scrollFunction()
+    };
+
+    function scrollFunction() {
+        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+            mybutton.style.display = "block";
+        } else {
+            mybutton.style.display = "none";
+        }
+    }
+
+    // When the user clicks on the button, scroll to the top of the document
+    function topFunction() {
+        document.body.scrollTop = 0; // For Safari
+        document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+    }
+
+    var toggleMenu = document.querySelector(`.button-menu`);
+    var toggleNav = document.querySelector(`.navigation-buttons-wrap`);
+
+    toggleMenu.onclick = function () {
+        toggleMenu.classList.toggle(`open`);
+        toggleNav.classList.toggle(`open`);
+    }
+    function dropdownMenuClick() {
+        document.getElementById("DogsDropdown").classList.toggle("show");
+    }
+
+</script>
+<script async defer crossorigin="anonymous"
+        src="https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v7.0"></script>
+</html>

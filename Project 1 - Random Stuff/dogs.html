@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dogs</title>
+    <link rel="stylesheet" href="stylesheet.css">
+    <link rel="stylesheet" href="carosel/owl.carousel.css">
+    <link rel="stylesheet" href="carosel/owl.theme.default.css">
+    <script src="https://kit.fontawesome.com/c11ac08255.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+</head>
+<body>
+<button onclick="topFunction()" id="myBtn" title="UP"><i class="fas fa-arrow-circle-up"></i></button>
+<div class="navigation-wrap">
+    <div class="button-menu">
+        <i class="fas fa-bars"></i>
+
+    </div>
+
+    <div class="navigation-signature-wrap">
+        <div class="navigation-signature">
+            Andreika
+        </div>
+    </div>
+    <div class="navigation-buttons-wrap">
+
+
+        <a href="index.html" class="navigation-buttons"> Home </a>
+        <div class="dogs.dropdown">
+            <button onclick="dropdownMenuClick()" class="navigation-buttons">Dogs</button>
+            <div class="dropdown-content" id="DogsDropdown">
+            <a href="dogs.html" class="navigation-buttons DogsDropdownButtons"> Dogs Main 1 </a>
+            <a href="dogs.html" class="navigation-buttons DogsDropdownButtons"> Dogs Main 2 </a>
+            <a href="dogs.html" class="navigation-buttons DogsDropdownButtons"> Dogs Main 3 </a>
+        </div>
+
+    </div>
+
+    <a href="contacts.html" class="navigation-buttons"> Contact me </a>
+    <a href="htmlCV.html" class="navigation-buttons"> My HTML CV </a>
+
+</div>
+
+
+</div>
+
+
+</div>
+<div class="about-container">
+    <div class="about-container-content">
+        <div class="about-container-left-content">
+            <h2> Грозни кучета</h2>
+            <div class="owl-carousel">
+                <img src="https://images.unsplash.com/photo-1510621785963-8c1744b6a8c5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80"
+                     class="slideshow-pictures">
+                <img src="https://images.unsplash.com/photo-1495708729180-9afca8fffaea?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1352&q=80"
+                     class="slideshow-pictures">
+                <img src="https://images.unsplash.com/photo-1483392707171-cb3e4b1cb8b0?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80"
+                     class="slideshow-pictures">
+                <img src="https://images.unsplash.com/photo-1517423738875-5ce310acd3da?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=705&q=80"
+                     class="slideshow-pictures">
+
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<div class="footer">
+
+    <div class="footerColumn2">
+        <h3 class="footerHeading"> Table 1 </h3>
+        <ul>
+            <li><a href="https://google.com" class="footerLink"> google.com 1 </a></li>
+            <li><a href="https://youtube.com" class="footerLink"> youtube.com 1 </a></li>
+            <li><a href="https://netfilx.com" class="footerLink"> netfilx.com 1 </a></li>
+        </ul>
+    </div>
+    <div class="footerColumn2">
+        <h3 class="footerHeading"> Table 2 </h3>
+        <ul>
+            <li><a href="https://google.com" class="footerLink"> google.com 2 </a></li>
+            <li><a href="https://youtube.com" class="footerLink"> youtube.com 2 </a></li>
+            <li><a href="https://netfilx.com" class="footerLink"> netfilx.com 2 </a></li>
+        </ul>
+    </div>
+    <div class="footerColumn2">
+        <h3 class="footerHeading"> Table 3 </h3>
+        <ul>
+            <li><a href="https://google.com" class="footerLink"> google.com 3 </a></li>
+            <li><a href="https://youtube.com" class="footerLink"> youtube.com 3 </a></li>
+            <li><a href="https://netfilx.com" class="footerLink"> netfilx.com 3 </a></li>
+        </ul>
+    </div>
+    <div class="footerColumn1">
+        <h3 class="footerHeading"> Facebook Page </h3>
+        <div class="fb-page" data-href="https://www.facebook.com/polesno.store/" data-tabs="" data-width="300px"
+             data-height="300" data-small-header="true" data-adapt-container-width="true" data-hide-cover="false"
+             data-show-facepile="true">
+            <blockquote cite="https://www.facebook.com/polesno.store/" class="fb-xfbml-parse-ignore"><a
+                    href="https://www.facebook.com/polesno.store/">Магазин Polesno</a></blockquote>
+        </div>
+
+    </div>
+</div>
+</body>
+
+<script src="carosel/jquery.min.js"></script>
+<script src="carosel/owl.carousel.js"></script>
+<script>
+    $('.owl-carousel').owlCarousel({
+        loop: true,
+        margin: 10,
+        nav: true,
+        animateOut: 'fadeOut',
+        autoplay: true,
+        autoplayTimeout: 1500,
+        responsive: {
+            0: {
+                items: 1
+            },
+            600: {
+                items: 1
+            },
+            1000: {
+                items: 1
+            }
+        }
+    })
+</script>
+<script>
+    const items3 = document.querySelectorAll(`.item-wraper`)
+
+    items3.forEach(Item => {
+        Item.addEventListener(`mouseover`, () => {
+            Item.childNodes[1].classList.add(`background-darken`)
+        })
+        Item.addEventListener(`mouseout`, () => {
+            Item.childNodes[1].classList.remove(`background-darken`)
+        })
+
+    })
+    mybutton = document.getElementById("myBtn");
+
+    // When the user scrolls down 20px from the top of the document, show the button
+    window.onscroll = function () {
+        scrollFunction()
+    };
+
+    function scrollFunction() {
+        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+            mybutton.style.display = "block";
+        } else {
+            mybutton.style.display = "none";
+        }
+    }
+
+    // When the user clicks on the button, scroll to the top of the document
+    function topFunction() {
+        document.body.scrollTop = 0; // For Safari
+        document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+    }
+
+    var toggleMenu = document.querySelector(`.button-menu`);
+    var toggleNav = document.querySelector(`.navigation-buttons-wrap`);
+
+    toggleMenu.onclick = function () {
+        toggleMenu.classList.toggle(`open`);
+        toggleNav.classList.toggle(`open`);
+    }
+    function dropdownMenuClick() {
+        document.getElementById("DogsDropdown").classList.toggle("show");
+    }
+
+</script>
+<script async defer crossorigin="anonymous"
+        src="https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v7.0"></script>
+</html>
